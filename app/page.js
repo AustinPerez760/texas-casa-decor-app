@@ -1,101 +1,262 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { FiArrowRight } from 'react-icons/fi';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+	return (
+		<div className='pt-20'>
+			{/* Hero Section - Full-width image with minimal text overlay */}
+			<section className='relative h-screen'>
+				<Image
+					src='/images/products/rusticLiving.jpg'
+					alt='Texas Casa Decor furniture'
+					fill
+					priority
+					className='object-cover'
+					sizes='100vw'
+				/>
+				<div className='absolute inset-0 bg-black/30' />
+				<div className='absolute inset-0 flex items-center justify-center'>
+					<div className='text-center text-white max-w-3xl px-4'>
+						<h1 className='text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight'>
+							Authentic Rustic Furniture
+						</h1>
+						<p className='text-xl mb-8 font-light'>
+							Handcrafted with real wood for your Texas home
+						</p>
+						<Link
+							href='/shop'
+							className='inline-block bg-white text-gray-900 px-8 py-3 font-medium tracking-wide'>
+							SHOP NOW
+						</Link>
+					</div>
+				</div>
+			</section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+			{/* Category Navigation */}
+			<section className='py-16 bg-white text-gray-300'>
+				<div className='container mx-auto px-4'>
+					<div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8'>
+						{[
+							{
+								name: 'Living',
+								image: '/images/categories/rusticMain.jpg',
+								path: '/shop/living',
+							},
+							{
+								name: 'Dining',
+								image: '/images/categories/rusticDining.jpg',
+								path: '/shop/dining',
+							},
+							{
+								name: 'Bedroom',
+								image: '/images/categories/rusticRoom.jpg',
+								path: '/shop/bedroom',
+							},
+							{
+								name: 'Office',
+								image: '/images/categories/rusticOffice.jpg',
+								path: '/shop/office',
+							},
+						].map((category) => (
+							<Link key={category.name} href={category.path} className='group'>
+								<div className='relative aspect-square overflow-hidden'>
+									<Image
+										src={category.image}
+										alt={category.name}
+										fill
+										className='object-cover transition-transform duration-500 group-hover:scale-105'
+										sizes='(max-width: 768px) 50vw, 25vw'
+									/>
+								</div>
+								<h2 className='mt-4 text-lg font-medium text-center uppercase tracking-wide'>
+									{category.name}
+								</h2>
+							</Link>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Featured Collection */}
+			<section className='py-16 bg-gray-100 text-gray-300'>
+				<div className='container mx-auto px-4'>
+					<h2 className='text-2xl font-light mb-12 text-center uppercase tracking-wide'>
+						The Fractal Collection
+					</h2>
+					<div className='relative aspect-[21/9] overflow-hidden'>
+						<Image
+							src='/images/products/rusticCollection.jpg'
+							alt='Fractal Collection'
+							fill
+							className='object-cover'
+							sizes='100vw'
+						/>
+						<div className='absolute inset-0 bg-black/20' />
+						<div className='absolute inset-0 flex items-center justify-center'>
+							<Link
+								href='/fractal-collection'
+								className='bg-white text-gray-900 px-8 py-3 font-medium tracking-wide'>
+								EXPLORE THE COLLECTION
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* New Arrivals */}
+			<section className='py-16 bg-white text-gray-300'>
+				<div className='container mx-auto px-4'>
+					<div className='flex flex-col md:flex-row justify-between items-center mb-12'>
+						<h2 className='text-2xl font-light uppercase tracking-wide mb-4 md:mb-0'>
+							New Arrivals
+						</h2>
+						<Link
+							href='/shop'
+							className='flex items-center text-gray-800 hover:text-gray-600 font-medium'>
+							View All <FiArrowRight className='ml-2' />
+						</Link>
+					</div>
+
+					<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+						{[
+							{
+								id: 'bar-7ft',
+								name: "7' Desk",
+								location: 'Weatherford',
+								image: '/images/products/desk4.jpg',
+							},
+							{
+								id: 'hutch-6ft',
+								name: "6' Mixed Wood Coffee Table",
+								location: 'New Braunfels',
+								image: '/images/products/rusticCoffee.jpg',
+							},
+							{
+								id: 'table-set-7ft',
+								name: "7' Table Set",
+								location: 'Weatherford',
+								image: '/images/products/rusticSet.jpg',
+							},
+						].map((product) => (
+							<Link
+								key={product.id}
+								href={`/shop/${product.id}`}
+								className='group'>
+								<div className='relative aspect-square overflow-hidden'>
+									<Image
+										src={product.image}
+										alt={product.name}
+										fill
+										className='object-cover transition-transform duration-500 group-hover:scale-105'
+										sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw'
+									/>
+								</div>
+								<div className='mt-4'>
+									<h3 className='text-lg font-medium'>{product.name}</h3>
+									<p className='text-sm text-gray-600'>
+										{product.location} Location
+									</p>
+								</div>
+							</Link>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Values Section */}
+			<section className='py-16 bg-gray-100 text-gray-300'>
+				<div className='container mx-auto px-4'>
+					<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+						{[
+							{
+								title: 'Real Wood',
+								description:
+									'All our furniture is crafted from authentic, high-quality wood sourced responsibly from sustainable forests.',
+							},
+							{
+								title: 'Timeless Quality',
+								description:
+									'Built to last generations with traditional craftsmanship and attention to detail that stands the test of time.',
+							},
+							{
+								title: 'Affordable Prices',
+								description:
+									'Premium furniture without the premium price tag. We offer fair prices on all our handcrafted pieces.',
+							},
+						].map((value, index) => (
+							<div key={index} className='text-center'>
+								<h3 className='text-lg font-medium uppercase tracking-wide mb-3'>
+									{value.title}
+								</h3>
+								<p className='text-gray-600'>{value.description}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Newsletter Section */}
+			<section className='py-16 bg-white text-gray-300'>
+				<div className='container mx-auto px-4 max-w-xl text-center'>
+					<h2 className='text-2xl font-light uppercase tracking-wide mb-4'>
+						Stay Connected
+					</h2>
+					<p className='text-gray-600 mb-8'>
+						Sign up to receive a monthly email with exclusive offers and a look
+						at new merchandise.
+					</p>
+					<form className='flex flex-col sm:flex-row gap-3'>
+						<input
+							type='email'
+							placeholder='Your email address'
+							className='flex-grow px-4 py-3 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-500'
+							required
+						/>
+						<button
+							type='submit'
+							className='bg-gray-900 text-white px-6 py-3 font-medium tracking-wide hover:bg-gray-800 transition-colors'>
+							SUBSCRIBE
+						</button>
+					</form>
+					<p className='text-gray-500 mt-3 text-sm'>We respect your privacy.</p>
+				</div>
+			</section>
+
+			{/* Service Promise */}
+			<section className='py-16 bg-gray-100'>
+				<div className='container mx-auto px-4'>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+						{[
+							{
+								title: 'Free Delivery',
+								description: 'On orders over $1,500 within our service areas',
+							},
+							{
+								title: 'Expert Design Help',
+								description: 'Complimentary design services at our stores',
+							},
+							{
+								title: 'Quality Guarantee',
+								description:
+									'All our furniture is built to last for generations',
+							},
+							{
+								title: 'Texas Craftsmanship',
+								description:
+									'Supporting local artisans and traditional techniques',
+							},
+						].map((service, index) => (
+							<div key={index}>
+								<h3 className='text-lg font-medium uppercase tracking-wide mb-2'>
+									{service.title}
+								</h3>
+								<p className='text-gray-600'>{service.description}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 }
