@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Texas-inspired color palette */
+  --texas-brown: #8B4513;
+  --texas-tan: #D2B48C;
+  --texas-terracotta: #CD5C5C;
+  --texas-turquoise: #30D5C8;
+  --texas-sand: #F4A460;
+  --texas-leather: #A0522D;
+  --texas-sage: #9CAF88;
+  --texas-sunset: #E97451;
+  --texas-clay: #B22222;
+  --texas-button: #44c0c5;
 }
 
 @theme inline {

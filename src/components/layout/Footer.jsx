@@ -23,33 +23,33 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className='bg-white text-gray-800 border-t border-gray-200'>
+		<footer className='bg-[var(--texas-tan)] bg-opacity-10 text-[var(--texas-brown)] border-t border-[var(--texas-tan)] border-opacity-30'>
 			<div className='container mx-auto px-4 pt-16 pb-8'>
 				{/* Main Footer Content */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
 					{/* Company Info */}
 					<div>
-						<h3 className='text-sm font-medium uppercase tracking-wide mb-6'>
+						<h3 className='text-sm font-medium uppercase tracking-wide mb-6 text-[var(--texas-brown)]'>
 							Texas Casa Decor
 						</h3>
 						<ul className='space-y-3 text-sm'>
 							<li>
-								<Link href='/about' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/about' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Our Story
 								</Link>
 							</li>
 							<li>
-								<Link href='/sustainability' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/sustainability' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Sustainability
 								</Link>
 							</li>
 							<li>
-								<Link href='/careers' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/careers' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Careers
 								</Link>
 							</li>
 							<li>
-								<Link href='/blog' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/blog' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Blog
 								</Link>
 							</li>
@@ -58,32 +58,32 @@ const Footer = () => {
 
 					{/* Customer Service */}
 					<div>
-						<h3 className='text-sm font-medium uppercase tracking-wide mb-6'>
+						<h3 className='text-sm font-medium uppercase tracking-wide mb-6 text-[var(--texas-brown)]'>
 							Customer Service
 						</h3>
 						<ul className='space-y-3 text-sm'>
 							<li>
-								<Link href='/help' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/help' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Help Center
 								</Link>
 							</li>
 							<li>
-								<Link href='/delivery' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/delivery' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Delivery Information
 								</Link>
 							</li>
 							<li>
-								<Link href='/returns' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/returns' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Returns & Exchanges
 								</Link>
 							</li>
 							<li>
-								<Link href='/warranty' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/warranty' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Warranty
 								</Link>
 							</li>
 							<li>
-								<Link href='/contact' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/contact' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Contact Us
 								</Link>
 							</li>
@@ -92,27 +92,27 @@ const Footer = () => {
 
 					{/* Resources */}
 					<div>
-						<h3 className='text-sm font-medium uppercase tracking-wide mb-6'>
+						<h3 className='text-sm font-medium uppercase tracking-wide mb-6 text-[var(--texas-brown)]'>
 							Resources
 						</h3>
 						<ul className='space-y-3 text-sm'>
 							<li>
-								<Link href='/design-services' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/design-services' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Design Services
 								</Link>
 							</li>
 							<li>
-								<Link href='/custom' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/custom' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Custom Furniture
 								</Link>
 							</li>
 							<li>
-								<Link href='/care' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/care' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Care & Maintenance
 								</Link>
 							</li>
 							<li>
-								<Link href='/catalog' className='text-gray-600 hover:text-gray-900'>
+								<Link href='/catalog' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Request Catalog
 								</Link>
 							</li>
@@ -121,20 +121,20 @@ const Footer = () => {
 
 					{/* Locations */}
 					<div>
-						<h3 className='text-sm font-medium uppercase tracking-wide mb-6'>
+						<h3 className='text-sm font-medium uppercase tracking-wide mb-6 text-[var(--texas-brown)]'>
 							Our Locations
 						</h3>
 						<div className='space-y-4 text-sm'>
 							{locations.map((location, index) => (
 								<div key={index}>
-									<p className='font-medium text-gray-900'>{location.city}</p>
-									<p className='text-gray-600'>{location.phone}</p>
-									<p className='text-gray-600'>{location.address}</p>
+									<p className='font-medium text-[var(--texas-brown)]'>{location.city}</p>
+									<p className='text-[var(--texas-leather)]'>{location.phone}</p>
+									<p className='text-[var(--texas-leather)]'>{location.address}</p>
 								</div>
 							))}
 							<Link 
 								href='/locations' 
-								className='inline-flex items-center text-gray-900 font-medium mt-2'
+								className='inline-flex items-center text-[var(--texas-sunset)] font-medium mt-2 hover:text-[var(--texas-clay)]'
 							>
 								All Locations <FiArrowRight className='ml-2' />
 							</Link>
@@ -143,13 +143,13 @@ const Footer = () => {
 				</div>
 
 				{/* Social and Newsletter */}
-				<div className='flex flex-col md:flex-row justify-between items-start border-t border-gray-200 pt-8 pb-8'>
+				<div className='flex flex-col md:flex-row justify-between items-start border-t border-[var(--texas-tan)] border-opacity-30 pt-8 pb-8'>
 					<div className='flex space-x-6 mb-6 md:mb-0'>
 						<a
 							href='https://instagram.com'
 							target='_blank'
 							rel='noopener noreferrer'
-							className='text-gray-600 hover:text-gray-900'
+							className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'
 							aria-label='Instagram'
 						>
 							<FiInstagram className='h-5 w-5' />
@@ -158,7 +158,7 @@ const Footer = () => {
 							href='https://facebook.com'
 							target='_blank'
 							rel='noopener noreferrer'
-							className='text-gray-600 hover:text-gray-900'
+							className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'
 							aria-label='Facebook'
 						>
 							<FiFacebook className='h-5 w-5' />
@@ -167,7 +167,7 @@ const Footer = () => {
 							href='https://twitter.com'
 							target='_blank'
 							rel='noopener noreferrer'
-							className='text-gray-600 hover:text-gray-900'
+							className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'
 							aria-label='Twitter'
 						>
 							<FiTwitter className='h-5 w-5' />
@@ -175,20 +175,20 @@ const Footer = () => {
 					</div>
 					
 					<div className='flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8'>
-						<Link href='/privacy' className='text-sm text-gray-600 hover:text-gray-900'>
+						<Link href='/privacy' className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 							Privacy Policy
 						</Link>
-						<Link href='/terms' className='text-sm text-gray-600 hover:text-gray-900'>
+						<Link href='/terms' className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 							Terms of Service
 						</Link>
-						<Link href='/accessibility' className='text-sm text-gray-600 hover:text-gray-900'>
+						<Link href='/accessibility' className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 							Accessibility
 						</Link>
 					</div>
 				</div>
 
 				{/* Copyright */}
-				<div className='text-sm text-gray-600'>
+				<div className='text-sm text-[var(--texas-leather)]'>
 					&copy; {new Date().getFullYear()} Texas Casa Decor. All rights reserved.
 				</div>
 			</div>

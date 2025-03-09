@@ -8,7 +8,7 @@ export default function Home() {
 			{/* Hero Section - Full-width image with minimal text overlay */}
 			<section className='relative h-screen'>
 				<Image
-					src='/images/products/rusticLiving.jpg'
+					src='/images/products/rusticLand.jpg'
 					alt='Texas Casa Decor furniture'
 					fill
 					priority
@@ -19,14 +19,14 @@ export default function Home() {
 				<div className='absolute inset-0 flex items-center justify-center'>
 					<div className='text-center text-white max-w-3xl px-4'>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight'>
-							Authentic Rustic Furniture
+							Inspired by the resilience of the American frontier
 						</h1>
 						<p className='text-xl mb-8 font-light'>
-							Handcrafted with real wood for your Texas home
+							Handcrafted with real wood for timeless durability
 						</p>
 						<Link
 							href='/shop'
-							className='inline-block bg-white text-gray-900 px-8 py-3 font-medium tracking-wide'>
+							className='inline-block bg-[#44c0c5] text-white px-8 py-3 font-medium tracking-wide hover:bg-[#3aa9ae] transition-colors'>
 							SHOP NOW
 						</Link>
 					</div>
@@ -34,28 +34,28 @@ export default function Home() {
 			</section>
 
 			{/* Category Navigation */}
-			<section className='py-16 bg-white text-gray-300'>
+			<section className='py-16 bg-white bg-opacity-10 text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4'>
 					<div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8'>
 						{[
 							{
 								name: 'Living',
-								image: '/images/categories/rusticMain.jpg',
+								image: '/images/categories/livingRoom.jpg',
 								path: '/shop/living',
 							},
 							{
 								name: 'Dining',
-								image: '/images/categories/rusticDining.jpg',
+								image: '/images/categories/diningRoom.jpg',
 								path: '/shop/dining',
 							},
 							{
 								name: 'Bedroom',
-								image: '/images/categories/rusticRoom.jpg',
+								image: '/images/categories/bedFrame.jpg',
 								path: '/shop/bedroom',
 							},
 							{
 								name: 'Office',
-								image: '/images/categories/rusticOffice.jpg',
+								image: '/images/categories/ofiice.jpg',
 								path: '/shop/office',
 							},
 						].map((category) => (
@@ -69,7 +69,7 @@ export default function Home() {
 										sizes='(max-width: 768px) 50vw, 25vw'
 									/>
 								</div>
-								<h2 className='mt-4 text-lg font-medium text-center uppercase tracking-wide'>
+								<h2 className='mt-4 text-lg font-medium text-center uppercase tracking-wide text-[var(--texas-brown)]'>
 									{category.name}
 								</h2>
 							</Link>
@@ -79,14 +79,14 @@ export default function Home() {
 			</section>
 
 			{/* Featured Collection */}
-			<section className='py-16 bg-gray-100 text-gray-300'>
+			<section className='py-16 bg-[var(--texas-sand)] bg-opacity-20 text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4'>
-					<h2 className='text-2xl font-light mb-12 text-center uppercase tracking-wide'>
+					<h2 className='text-2xl font-light mb-12 text-center uppercase tracking-wide text-[var(--texas-brown)]'>
 						The Fractal Collection
 					</h2>
 					<div className='relative aspect-[21/9] overflow-hidden'>
 						<Image
-							src='/images/products/rusticCollection.jpg'
+							src='/images/products/fractal2.jpg'
 							alt='Fractal Collection'
 							fill
 							className='object-cover'
@@ -96,7 +96,7 @@ export default function Home() {
 						<div className='absolute inset-0 flex items-center justify-center'>
 							<Link
 								href='/fractal-collection'
-								className='bg-white text-gray-900 px-8 py-3 font-medium tracking-wide'>
+								className='bg-[#44c0c5] text-white px-8 py-3 font-medium tracking-wide hover:bg-[#3aa9ae] transition-colors'>
 								EXPLORE THE COLLECTION
 							</Link>
 						</div>
@@ -105,15 +105,15 @@ export default function Home() {
 			</section>
 
 			{/* New Arrivals */}
-			<section className='py-16 bg-white text-gray-300'>
+			<section className='py-16 bg-white text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4'>
 					<div className='flex flex-col md:flex-row justify-between items-center mb-12'>
-						<h2 className='text-2xl font-light uppercase tracking-wide mb-4 md:mb-0'>
+						<h2 className='text-2xl font-light uppercase tracking-wide mb-4 md:mb-0 text-[var(--texas-brown)]'>
 							New Arrivals
 						</h2>
 						<Link
 							href='/shop'
-							className='flex items-center text-gray-800 hover:text-gray-600 font-medium'>
+							className='flex items-center text-[#44c0c5] hover:text-[#3aa9ae] font-medium'>
 							View All <FiArrowRight className='ml-2' />
 						</Link>
 					</div>
@@ -122,21 +122,21 @@ export default function Home() {
 						{[
 							{
 								id: 'bar-7ft',
-								name: "7' Desk",
+								name: '7" L-Shape Bar',
 								location: 'Weatherford',
-								image: '/images/products/desk4.jpg',
+								image: '/images/products/shapedBar.jpg',
 							},
 							{
 								id: 'hutch-6ft',
-								name: "6' Mixed Wood Coffee Table",
-								location: 'New Braunfels',
-								image: '/images/products/rusticCoffee.jpg',
+								name: "7' Table Set, Weatherford Location",
+								location: 'Weatherford',
+								image: '/images/products/roomTable.jpg',
 							},
 							{
 								id: 'table-set-7ft',
-								name: "7' Table Set",
+								name: "7' Red Oak Table",
 								location: 'Weatherford',
-								image: '/images/products/rusticSet.jpg',
+								image: '/images/products/oakTable.jpg',
 							},
 						].map((product) => (
 							<Link
@@ -153,8 +153,10 @@ export default function Home() {
 									/>
 								</div>
 								<div className='mt-4'>
-									<h3 className='text-lg font-medium'>{product.name}</h3>
-									<p className='text-sm text-gray-600'>
+									<h3 className='text-lg font-medium text-[var(--texas-brown)]'>
+										{product.name}
+									</h3>
+									<p className='text-sm text-[var(--texas-leather)]'>
 										{product.location} Location
 									</p>
 								</div>
@@ -165,7 +167,7 @@ export default function Home() {
 			</section>
 
 			{/* Values Section */}
-			<section className='py-16 bg-gray-100 text-gray-300'>
+			<section className='py-16 bg-[var(--texas-sand)] bg-opacity-10 text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4'>
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 						{[
@@ -186,10 +188,12 @@ export default function Home() {
 							},
 						].map((value, index) => (
 							<div key={index} className='text-center'>
-								<h3 className='text-lg font-medium uppercase tracking-wide mb-3'>
+								<h3 className='text-lg font-medium uppercase tracking-wide mb-3 text-[var(--texas-brown)]'>
 									{value.title}
 								</h3>
-								<p className='text-gray-600'>{value.description}</p>
+								<p className='text-[var(--texas-leather)]'>
+									{value.description}
+								</p>
 							</div>
 						))}
 					</div>
@@ -197,12 +201,12 @@ export default function Home() {
 			</section>
 
 			{/* Newsletter Section */}
-			<section className='py-16 bg-white text-gray-300'>
+			<section className='py-16 bg-white text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4 max-w-xl text-center'>
-					<h2 className='text-2xl font-light uppercase tracking-wide mb-4'>
+					<h2 className='text-2xl font-light uppercase tracking-wide mb-4 text-[var(--texas-brown)]'>
 						Stay Connected
 					</h2>
-					<p className='text-gray-600 mb-8'>
+					<p className='text-[var(--texas-leather)] mb-8'>
 						Sign up to receive a monthly email with exclusive offers and a look
 						at new merchandise.
 					</p>
@@ -210,21 +214,23 @@ export default function Home() {
 						<input
 							type='email'
 							placeholder='Your email address'
-							className='flex-grow px-4 py-3 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-500'
+							className='flex-grow px-4 py-3 border border-[var(--texas-tan)] focus:outline-none focus:ring-1 focus:ring-[var(--texas-brown)]'
 							required
 						/>
 						<button
 							type='submit'
-							className='bg-gray-900 text-white px-6 py-3 font-medium tracking-wide hover:bg-gray-800 transition-colors'>
+							className='bg-[#44c0c5] text-white px-6 py-3 font-medium tracking-wide hover:bg-[#3aa9ae] transition-colors'>
 							SUBSCRIBE
 						</button>
 					</form>
-					<p className='text-gray-500 mt-3 text-sm'>We respect your privacy.</p>
+					<p className='text-[var(--texas-leather)] mt-3 text-sm'>
+						We respect your privacy.
+					</p>
 				</div>
 			</section>
 
 			{/* Service Promise */}
-			<section className='py-16 bg-gray-100'>
+			<section className='py-16 bg-white bg-opacity-5'>
 				<div className='container mx-auto px-4'>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 						{[
@@ -248,10 +254,12 @@ export default function Home() {
 							},
 						].map((service, index) => (
 							<div key={index}>
-								<h3 className='text-lg font-medium uppercase tracking-wide mb-2'>
+								<h3 className='text-lg font-medium uppercase tracking-wide mb-2 text-[var(--texas-brown)]'>
 									{service.title}
 								</h3>
-								<p className='text-gray-600'>{service.description}</p>
+								<p className='text-[var(--texas-leather)]'>
+									{service.description}
+								</p>
 							</div>
 						))}
 					</div>
