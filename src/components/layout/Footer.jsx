@@ -1,7 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { FiInstagram, FiFacebook, FiTwitter, FiArrowRight } from 'react-icons/fi';
+import {
+	FiInstagram,
+	FiFacebook,
+	FiTwitter,
+	FiArrowRight,
+} from 'react-icons/fi';
 
 const Footer = () => {
 	const locations = [
@@ -23,7 +28,7 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className='bg-[var(--texas-tan)] bg-opacity-10 text-[var(--texas-brown)] border-t border-[var(--texas-tan)] border-opacity-30'>
+		<footer className='bg-[var(--texas-turquoise)] bg-opacity-10 text-[var(--texas-brown)] border-t border-[var(--texas-tan)] border-opacity-30'>
 			<div className='container mx-auto px-4 pt-16 pb-8'>
 				{/* Main Footer Content */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
@@ -34,22 +39,30 @@ const Footer = () => {
 						</h3>
 						<ul className='space-y-3 text-sm'>
 							<li>
-								<Link href='/about' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/about'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Our Story
 								</Link>
 							</li>
 							<li>
-								<Link href='/sustainability' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/sustainability'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Sustainability
 								</Link>
 							</li>
 							<li>
-								<Link href='/careers' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/careers'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Careers
 								</Link>
 							</li>
 							<li>
-								<Link href='/blog' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/blog'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Blog
 								</Link>
 							</li>
@@ -63,27 +76,37 @@ const Footer = () => {
 						</h3>
 						<ul className='space-y-3 text-sm'>
 							<li>
-								<Link href='/help' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/help'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Help Center
 								</Link>
 							</li>
 							<li>
-								<Link href='/delivery' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/delivery'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Delivery Information
 								</Link>
 							</li>
 							<li>
-								<Link href='/returns' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/returns'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Returns & Exchanges
 								</Link>
 							</li>
 							<li>
-								<Link href='/warranty' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/warranty'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Warranty
 								</Link>
 							</li>
 							<li>
-								<Link href='/contact' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/contact'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Contact Us
 								</Link>
 							</li>
@@ -97,22 +120,30 @@ const Footer = () => {
 						</h3>
 						<ul className='space-y-3 text-sm'>
 							<li>
-								<Link href='/design-services' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/design-services'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Design Services
 								</Link>
 							</li>
 							<li>
-								<Link href='/custom' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/custom'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Custom Furniture
 								</Link>
 							</li>
 							<li>
-								<Link href='/care' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/care'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Care & Maintenance
 								</Link>
 							</li>
 							<li>
-								<Link href='/catalog' className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+								<Link
+									href='/catalog'
+									className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 									Request Catalog
 								</Link>
 							</li>
@@ -127,15 +158,20 @@ const Footer = () => {
 						<div className='space-y-4 text-sm'>
 							{locations.map((location, index) => (
 								<div key={index}>
-									<p className='font-medium text-[var(--texas-brown)]'>{location.city}</p>
-									<p className='text-[var(--texas-leather)]'>{location.phone}</p>
-									<p className='text-[var(--texas-leather)]'>{location.address}</p>
+									<p className='font-medium text-[var(--texas-brown)]'>
+										{location.city}
+									</p>
+									<p className='text-[var(--texas-leather)]'>
+										{location.phone}
+									</p>
+									<p className='text-[var(--texas-leather)]'>
+										{location.address}
+									</p>
 								</div>
 							))}
-							<Link 
-								href='/locations' 
-								className='inline-flex items-center text-[var(--texas-sunset)] font-medium mt-2 hover:text-[var(--texas-clay)]'
-							>
+							<Link
+								href='/locations'
+								className='inline-flex items-center text-[var(--texas-sunset)] font-medium mt-2 hover:text-[var(--texas-clay)]'>
 								All Locations <FiArrowRight className='ml-2' />
 							</Link>
 						</div>
@@ -150,8 +186,7 @@ const Footer = () => {
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'
-							aria-label='Instagram'
-						>
+							aria-label='Instagram'>
 							<FiInstagram className='h-5 w-5' />
 						</a>
 						<a
@@ -159,8 +194,7 @@ const Footer = () => {
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'
-							aria-label='Facebook'
-						>
+							aria-label='Facebook'>
 							<FiFacebook className='h-5 w-5' />
 						</a>
 						<a
@@ -168,20 +202,25 @@ const Footer = () => {
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'
-							aria-label='Twitter'
-						>
+							aria-label='Twitter'>
 							<FiTwitter className='h-5 w-5' />
 						</a>
 					</div>
-					
+
 					<div className='flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8'>
-						<Link href='/privacy' className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+						<Link
+							href='/privacy'
+							className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 							Privacy Policy
 						</Link>
-						<Link href='/terms' className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+						<Link
+							href='/terms'
+							className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 							Terms of Service
 						</Link>
-						<Link href='/accessibility' className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
+						<Link
+							href='/accessibility'
+							className='text-sm text-[var(--texas-leather)] hover:text-[var(--texas-brown)]'>
 							Accessibility
 						</Link>
 					</div>
@@ -189,7 +228,8 @@ const Footer = () => {
 
 				{/* Copyright */}
 				<div className='text-sm text-[var(--texas-leather)]'>
-					&copy; {new Date().getFullYear()} Texas Casa Decor. All rights reserved.
+					&copy; {new Date().getFullYear()} Texas Casa Decor. All rights
+					reserved.
 				</div>
 			</div>
 		</footer>

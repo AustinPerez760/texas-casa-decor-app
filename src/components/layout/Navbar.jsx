@@ -39,7 +39,7 @@ const Navbar = () => {
 	return (
 		<header className='fixed top-0 w-full z-50'>
 			{/* Announcement Bar */}
-			<div className='bg-[var(--texas-sand)] bg-opacity-20 py-2 text-center text-sm font-medium text-[var(--texas-brown)]'>
+			<div className='bg-[var(--texas-turquoise)] bg-opacity-20 py-2 text-center text-sm font-medium text-[var(--texas-brown)]'>
 				Free delivery on orders over $1,500.{' '}
 				<Link
 					href='/delivery'

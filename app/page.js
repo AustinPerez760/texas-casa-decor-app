@@ -79,9 +79,9 @@ export default function Home() {
 			</section>
 
 			{/* Featured Collection */}
-			<section className='py-16 bg-[var(--texas-sand)] bg-opacity-20 text-[var(--texas-brown)]'>
+			<section className='py-16 bg-[var(--texas-turquoise)] bg-opacity-20 text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4'>
-					<h2 className='text-2xl font-light mb-12 text-center uppercase tracking-wide text-[var(--texas-brown)]'>
+					<h2 className='text-2xl font-light mb-12 text-center uppercase tracking-wide text-white'>
 						The Fractal Collection
 					</h2>
 					<div className='relative aspect-[21/9] overflow-hidden'>
@@ -96,7 +96,7 @@ export default function Home() {
 						<div className='absolute inset-0 flex items-center justify-center'>
 							<Link
 								href='/fractal-collection'
-								className='bg-[#44c0c5] text-white px-8 py-3 font-medium tracking-wide hover:bg-[#3aa9ae] transition-colors'>
+								className='bg-[var(--texas-brown)] text-white px-8 py-3 font-medium tracking-wide hover:bg-[#3aa9ae] transition-colors'>
 								EXPLORE THE COLLECTION
 							</Link>
 						</div>
@@ -167,7 +167,7 @@ export default function Home() {
 			</section>
 
 			{/* Values Section */}
-			<section className='py-16 bg-[var(--texas-sand)] bg-opacity-10 text-[var(--texas-brown)]'>
+			<section className='py-16 bg-[var(--texas-turquoise)] bg-opacity-10 text-[var(--texas-brown)]'>
 				<div className='container mx-auto px-4'>
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 						{[
