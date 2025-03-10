@@ -1,38 +1,38 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  
-  /* Texas-inspired color palette */
-  --texas-brown: #8B4513;
-  --texas-tan: #D2B48C;
-  --texas-terracotta: #CD5C5C;
-  --texas-turquoise: #30D5C8;
-  --texas-sand: #F4A460;
-  --texas-leather: #A0522D;
-  --texas-sage: #9CAF88;
-  --texas-sunset: #E97451;
-  --texas-clay: #B22222;
-  --texas-button: #44c0c5;
+	--background: #ffffff;
+	--foreground: #171717;
+
+	/* Texas-inspired color palette */
+	--texas-brown: #8b4513;
+	--texas-tan: #d2b48c;
+	--texas-terracotta: #cd5c5c;
+	--texas-turquoise: #44c0c5;
+	--texas-sand: #f4a460;
+	--texas-leather: #a0522d;
+	--texas-sage: #9caf88;
+	--texas-sunset: #e97451;
+	--texas-clay: #b22222;
+	--texas-button: #44c0c5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
 }
